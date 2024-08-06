@@ -1,0 +1,76 @@
+[user]
+    name = Yanai Klugman
+    email = yanaiklugman@gmail.com
+
+[init]
+    defaultBranch = main  # Use 'main' as the default branch for new repositories
+
+[core]
+    editor = code --wait  # Set Visual Studio Code as the default editor for WSL
+    excludesfile = ~/dotfiles/git/.gitignore_global  # Path to global .gitignore
+    pager = delta  # Use 'delta' for enhanced diff viewing
+    autocrlf = input  # Convert CRLF to LF on commit (Linux standard)
+    fscache = true  # Enable filesystem caching for better performance
+
+[pull]
+    rebase = true  # Rebase on pull to maintain a linear history
+
+[push]
+    autoSetupRemote = true  # Automatically set up remote tracking branches
+
+[color]
+    ui = auto  # Enable color output in Git commands
+
+[interactive]
+    diffFilter = delta --color-only  # Use delta for interactive diffs
+
+[delta]
+    navigate = true  # Enable navigation in delta diff output
+    side-by-side = true  # Show diffs side-by-side for easier comparison
+    light = false  # Use dark theme for delta (set to true if you prefer light theme)
+
+[diff]
+    compactionHeuristic = true  # Improved diff display by grouping changes
+    mnemonicprefix = true  # Show more intuitive status in diffs
+
+[status]
+    showUntrackedFiles = all  # Always show untracked files in status
+
+[rebase]
+    autosquash = true  # Automatically squashes fixup! and squash! commits
+
+[fetch]
+    prune = true  # Prune remote branches by default
+
+[merge]
+    ff = only  # Enforce fast-forward merges for a cleaner history
+
+[gc]
+    auto = 256  # Trigger garbage collection after 256 loose objects
+
+[alias]
+    # Simplify common Git commands
+    last = log -1 HEAD
+    graph = log --graph --oneline --decorate
+    save = !git add -A && git commit -m 'SAVEPOINT'
+    unwip = !git log -n 1 | grep -q -c 'WIP' && git reset HEAD~1
+    unstage = reset HEAD --
+    undo = reset --soft HEAD^
+    amend = commit --amend
+    wip = !git add -u && git commit -m 'WIP'
+    stage = add
+    discard = checkout --
+    stat = status -s
+    stashall = stash --include-untracked
+    branches = branch -a
+    clean = "!git clean -fd && git reset --hard"  # Clean working directory
+    prune = prune --progress  # Remove stale remote-tracking branches
+    aliases = config --get-regexp alias  # Show all aliases
+
+[log]
+    decorate = short  # Show refs in log output in a concise format
+    date = relative  # Display dates in a relative format (e.g., "2 days ago")
+
+[commit]
+    gpgSign = false  # Disable GPG signing for commits (simplifies the process for personal use)
+
