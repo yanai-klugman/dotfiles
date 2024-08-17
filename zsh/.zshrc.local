@@ -1,0 +1,3 @@
+# Local machine-specific overrides
+export PATH="$HOME/bin:$PATH"
+
