@@ -74,3 +74,9 @@
 [commit]
     gpgSign = false  # Disable GPG signing for commits (simplifies the process for personal use)
 
+[credential "https://github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
