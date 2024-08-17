@@ -3,25 +3,20 @@ final_space = true
 console_title_template = "{{if .Root}}(Admin){{end}} {{.PWD}}"
 
 [palette]
-# Background and foreground optimized for a semi-transparent terminal
-base = "#1C1E26"      # Darker background to enhance transparency
-surface = "#232530"
-overlay = "#2E303E"
-muted = "#676E95"     # Muted elements with a hint of blue-grey
-subtle = "#908CAA"    # Slightly brighter for subtle elements
-# Primary colors inspired by Rose-Pine and Catppuccin-Mocha
-pine = "#7A88CF"
-foam = "#9CCFD8"
-rose = "#E05C75"
-iris = "#C4A7E7"
-gold = "#F2C27B"
-mauve = "#B877DB"
-lavender = "#CBD4E2"
-peach = "#F4A27F"
-sky = "#68B0AB"
-text = "#D8DEE9"
-subtext1 = "#B1B8C6"
-subtext0 = "#7E869A"
+base = "#191724"
+surface = "#1e1e2e"
+overlay = "#2c2a3e"
+pine = "#9ccfd8"
+foam = "#a6e3e9"
+rose = "#f38ba8"
+gold = "#fab387"
+mauve = "#cba6f7"
+sky = "#89dceb"
+emerald = "#a6e3a1"
+lavender = "#b4befe"
+text = "#e0def4"
+subtext1 = "#cdd6f4"
+subtext0 = "#6e6a86"
 
 [[blocks]]
 type = "prompt"
@@ -32,24 +27,25 @@ newline = false
   type = "path"
   style = "plain"
   foreground = "p:foam"
-  template = "{{ if eq .Path \"/home/yourusername\" }}~{{ else }}{{ .Path }}{{ end }} "
+  template = "{{ .Path }} "
+
   [blocks.segments.properties]
   style = "full"
 
 [[blocks.segments]]
 type = "git"
 style = "plain"
-foreground = "p:muted"
-template = "{{ .UpstreamIcon }}{{ .HEAD }}{{ if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} <#F4A27F>*</>{{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uf046 <#F2C27B>{{ .Staging.String }}</>{{ end }}{{ if gt .StashCount 0 }} \ueb4b {{ .StashCount }}{{ end }}"
+foreground = "#6C6C6C"
+template = "{{ .UpstreamIcon }}{{ .HEAD }}{{ if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} <#FFAFD7>*</>{{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }} \ueb4b {{ .StashCount }}{{ end }} "
+
 [blocks.segments.properties]
-branch_ahead_icon = "<#B877DB>\u21e1 </>"
-branch_behind_icon = "<#B877DB>\u21e3 </>"
+branch_ahead_icon = "⇡  "
+branch_behind_icon = "⇣  "
 branch_icon = ""
 fetch_stash_count = true
 fetch_status = true
 fetch_upstream_icon = true
 github_icon = ""
-
 
 [[blocks]]
 type = "prompt"
@@ -59,27 +55,15 @@ newline = true
   [[blocks.segments]]
   type = "text"
   style = "plain"
-  foreground = "p:lavender"
-  template = "❯"
-
-[[blocks]]
-type = "prompt"
-alignment = "left"
-newline = true
-
-  [[blocks.segments]]
-  type = "status"
-  style = "plain"
-  foreground = "p:mauve"
-  foreground_templates = ["{{ if gt .Code 0 }}p:rose{{ end }}"]
-  template = "❯"
+  foreground = "p:rose"
+  background = "transparent"
+  template = "❯ "
 
 [transient_prompt]
-foreground = "p:lavender"
-foreground_templates = ["{{ if gt .Code 0 }}p:rose{{ end }}"]
-template = "❯"
+foreground = "p:mauve"
+template = "❯ "
 
 [secondary_prompt]
-foreground = "p:subtle"
-template = "❯❯"
+foreground = "p:subtext1"
+template = "❯❯ "
 
