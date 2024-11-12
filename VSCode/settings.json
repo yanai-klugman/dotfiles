@@ -1,0 +1,244 @@
+{
+  /*
+  ============================================
+  ||            Appearance Settings         ||
+  ============================================
+  */
+
+  "workbench.colorTheme": "Vague",
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.sideBar.location": "right",
+  "workbench.activityBar.location": "bottom",
+  "workbench.editor.showTabs": "none",
+  "workbench.statusBar.visible": true,
+  "workbench.editor.labelFormat": "short",
+  "workbench.list.smoothScrolling": true,
+  "workbench.editor.decorations.badges": false,
+  "workbench.editor.enablePreview": false,
+  "workbench.tree.renderIndentGuides": "onHover",
+  "workbench.startupEditor": "welcomePageInEmptyWorkbench",
+  "window.newWindowDimensions": "inherit",
+  "breadcrumbs.enabled": false,
+
+  /*
+  ============================================
+  ||           Editor Configuration         ||
+  ============================================
+  */
+
+  "editor.fontFamily": "Monaspice NF, Consolas, 'Courier New'",
+  "editor.fontLigatures": true,
+  "editor.fontSize": 16,
+  "editor.suggestFontSize": 16,
+  "editor.wordWrap": "on",
+  "editor.minimap.enabled": false,
+  "editor.lineNumbers": "off",
+  "editor.smoothScrolling": true,
+  "editor.tabSize": 2,
+  "editor.detectIndentation": true,
+  "editor.renderWhitespace": "selection",
+  "editor.rulers": [80],
+  "editor.quickSuggestions": {
+    "other": true,
+    "comments": false,
+    "strings": false
+  },
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": "explicit",
+    "source.fixAll": "explicit"
+  },
+  "editor.copyWithSyntaxHighlighting": false,
+  "editor.snippetSuggestions": "top",
+  "editor.autoClosingBrackets": "always",
+  "editor.autoClosingQuotes": "always",
+  "editor.cursorSmoothCaretAnimation": "explicit",
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.indentation": true,
+  "editor.largeFileOptimizations": true,
+  "editor.emptySelectionClipboard": false,
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.matchBrackets": "near",
+  "editor.gotoLocation.multipleReferences": "goto",
+  "editor.gotoLocation.multipleDefinitions": "goto",
+  "editor.gotoLocation.multipleDeclarations": "goto",
+  "editor.gotoLocation.multipleImplementations": "goto",
+  "editor.gotoLocation.multipleTypeDefinitions": "goto",
+  "editor.wordSeparators": "`~!@#%^&*()=+[{]}\\|;:'\",.<>/?",
+  "diffEditor.ignoreTrimWhitespace": false,
+  "diffEditor.renderSideBySide": false,
+
+  /*
+  ============================================
+  ||           Terminal Configuration       ||
+  ============================================
+  */
+
+  "terminal.integrated.fontFamily": "CaskaydiaCove NF, Consolas",
+  "terminal.integrated.fontSize": 14,
+  "terminal.integrated.lineHeight": 1.2,
+  "terminal.integrated.scrollback": 5000,
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.enablePersistentSessions": true,
+  "terminal.integrated.env.windows": {
+    "PROCESSOR_ARCHITECTURE": "ARM64"
+  },
+
+  /*
+  ============================================
+  ||        File & Save Configuration       ||
+  ============================================
+  */
+
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 5000,
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/Thumbs.db": true,
+    "**/node_modules": true
+  },
+  "files.watcherExclude": {
+    "**/node_modules/**": true,
+    "**/tmp/**": true
+  },
+  "files.hotExit": "onExitAndWindowClose",
+
+  /*
+  ============================================
+  ||        Search & Exclusions Settings    ||
+  ============================================
+  */
+
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/bower_components": true,
+    "**/*.code-search": true,
+    "**/.git": true,
+    "**/dist": true,
+    "**/out": true
+  },
+  "search.followSymlinks": false,
+
+  /*
+  ============================================
+  ||           Git Integration              ||
+  ============================================
+  */
+
+  "git.autofetch": true,
+  "git.confirmSync": false,
+  "git.enableSmartCommit": true,
+  "git.countBadge": "tracked",
+  "git.fetchOnPull": true,
+  "git.showProgress": true,
+
+  /*
+  ============================================
+  ||        Telemetry & Privacy             ||
+  ============================================
+  */
+
+  "workbench.enableExperiments": false,
+  "telemetry.telemetryLevel": "crash",
+
+  /*
+  ============================================
+  ||       Language-Specific Configurations ||
+  ============================================
+  */
+
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.formatOnSave": true,
+    "editor.tabSize": 4
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[yaml]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[toml]": {
+    "editor.defaultFormatter": "tamasfe.even-better-toml",
+    "editor.formatOnSave": true
+  },
+
+  /*
+  ============================================
+  ||       Python-Specific Configuration    ||
+  ============================================
+  */
+
+  "python.analysis.typeCheckingMode": "basic",
+  "python.analysis.autoImportCompletions": true,
+  "python.analysis.diagnosticSeverityOverrides": {
+    "reportMissingImports": "error",
+    "reportOptionalSubscript": "warning"
+  },
+  "python.testing.pytestEnabled": true,
+  "python.testing.autoTestDiscoverOnSaveEnabled": true,
+
+  /*
+  ============================================
+  ||       PowerShell-Specific Configuration ||
+  ============================================
+  */
+
+  "powershell.integratedConsole.focusConsoleOnExecute": false,
+  "powershell.scriptAnalysis.enable": true,
+  "powershell.codeFormatting.whitespaceBeforeOpenBrace": true,
+
+  /*
+  ============================================
+  ||       Extension-Specific Settings      ||
+  ============================================
+  */
+
+  "extensions.autoUpdate": true,
+  "extensions.ignoreRecommendations": true,
+  "extensions.autoCheckUpdates": true,
+
+  /*
+  ============================================
+  ||       File Nesting Configuration       ||
+  ============================================
+  */
+
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.expand": false,
+  "explorer.fileNesting.patterns": {
+    ".env": "*.env, .env.*, .envrc",
+    ".gitignore": ".gitattributes, .gitmodules, .gitmessage, .mailmap",
+    "Dockerfile": "*.dockerfile, .dockerignore, docker-compose.*",
+    "README*": "CHANGELOG*, LICENSE*, AUTHORS, CONTRIBUTORS",
+    "requirements.txt": "requirements*.in, requirements*.txt",
+    "pyproject.toml": "Pipfile.lock, poetry.lock, MANIFEST.in",
+    "*.md": "$(capture).*",
+    "*.json": "$(capture).lock",
+    "setup.py": ".flake8, .isort.cfg, tox.ini, setup.cfg",
+    "Pipfile": "Pipfile.lock, requirements*.txt, tox.ini",
+    "*.toml": ".editorconfig, .isort.cfg, .flake8"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.lineHeight": 1.2
+
+  /*
+  ============================================
+  ||       Miscellaneous Settings           ||
+  ============================================
+  ||  Placeholder for fields that may       ||
+  ||  automatically be added by extensions, ||
+  ||  plugins, or the VS Code editor.       ||
+  ============================================
+  */
+}

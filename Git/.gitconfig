@@ -1,0 +1,77 @@
+[user]
+        email = yanaiklugman@gmail.com
+        name = Yanai Klugman
+
+[core]
+        editor = code --wait
+        autocrlf = true
+
+[alias]
+        unstage = reset HEAD --
+        last = log -1 HEAD
+        amend = commit --amend
+        lola = log --graph --all --decorate --oneline
+        ignore = update-index --assume-unchanged
+        track = update-index --no-assume-unchanged
+
+[diff]
+        tool = default-difftool
+
+[difftool "default-difftool"]
+        cmd = code --wait --diff "$LOCAL" "$REMOTE"
+
+[core]
+    pager = delta
+<<<<<<< HEAD
+
+=======
+
+>>>>>>> 7838e9f (Initial Commit)
+[interactive]
+    diffFilter = delta --color-only
+
+[delta]
+    features = side-by-side line-numbers decorations
+
+[merge]
+        tool = default-mergetool
+        automerge = true
+
+[mergetool "default-mergetool"]
+        cmd = code --wait "$MERGED"
+        trustExitCode = true
+
+[color]
+        ui = true
+
+[log]
+        decorate = short
+
+[rerere]
+        enabled = true
+
+[fetch]
+        prune = true
+
+[pull]
+        rebase = true
+
+[push]
+        default = simple
+        autoSetupRemote = true
+
+[rebase]
+        autostash = true
+
+[status]
+        showUntrackedFiles = all
+
+[init]
+        defaultBranch = main
+
+[commit]
+        gpgSign = false
+
+[http]
+        slow = 2
+        postBuffer = 524288000
