@@ -1,48 +1,41 @@
 {
-  /*
-  ============================================
-  ||            Appearance Settings         ||
-  ============================================
-  */
-
-  "workbench.colorTheme": "Vague",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.sideBar.location": "right",
   "workbench.activityBar.location": "bottom",
-  "workbench.editor.showTabs": "none",
-  "workbench.statusBar.visible": true,
+  "workbench.editor.showTabs": "multiple",
   "workbench.editor.labelFormat": "short",
+  "workbench.statusBar.visible": true,
   "workbench.list.smoothScrolling": true,
-  "workbench.editor.decorations.badges": false,
-  "workbench.editor.enablePreview": false,
   "workbench.tree.renderIndentGuides": "onHover",
-  "workbench.startupEditor": "welcomePageInEmptyWorkbench",
-  "window.newWindowDimensions": "inherit",
+  "workbench.colorTheme": "One Dark Modern",
+  "workbench.startupEditor": "none",
   "breadcrumbs.enabled": false,
 
   /*
-  ============================================
-  ||           Editor Configuration         ||
-  ============================================
-  */
+    =====================================================
+    ||               EDITOR SETTINGS                   ||
+    =====================================================
+    */
 
+  // Font and Typography
   "editor.fontFamily": "Monaspice NF, Consolas, 'Courier New'",
   "editor.fontLigatures": true,
   "editor.fontSize": 16,
   "editor.suggestFontSize": 16,
+  "editor.lineHeight": 1.2,
+
+  // Text Rendering and Visibility
   "editor.wordWrap": "on",
-  "editor.minimap.enabled": false,
-  "editor.lineNumbers": "off",
+  "editor.lineNumbers": "relative",
+  "editor.renderWhitespace": "trailing",
+  "editor.rulers": [88],
   "editor.smoothScrolling": true,
-  "editor.tabSize": 2,
-  "editor.detectIndentation": true,
-  "editor.renderWhitespace": "selection",
-  "editor.rulers": [80],
-  "editor.quickSuggestions": {
-    "other": true,
-    "comments": false,
-    "strings": false
-  },
+  "editor.cursorSmoothCaretAnimation": "explicit",
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.indentation": true,
+  "editor.minimap.enabled": false,
+
+  // Code Actions and Formatting
   "editor.codeActionsOnSave": {
     "source.organizeImports": "explicit",
     "source.fixAll": "explicit"
@@ -50,28 +43,30 @@
   "editor.copyWithSyntaxHighlighting": false,
   "editor.snippetSuggestions": "top",
   "editor.autoClosingBrackets": "always",
-  "editor.autoClosingQuotes": "always",
-  "editor.cursorSmoothCaretAnimation": "explicit",
-  "editor.bracketPairColorization.enabled": true,
-  "editor.guides.indentation": true,
-  "editor.largeFileOptimizations": true,
-  "editor.emptySelectionClipboard": false,
-  "editor.multiCursorModifier": "ctrlCmd",
-  "editor.matchBrackets": "near",
+  "editor.autoClosingQuotes": "beforeWhitespace",
+
+  // Indentation and Tabs
+  "editor.tabSize": 2,
+  "editor.detectIndentation": true,
+
+  // Go To and Navigation
   "editor.gotoLocation.multipleReferences": "goto",
   "editor.gotoLocation.multipleDefinitions": "goto",
   "editor.gotoLocation.multipleDeclarations": "goto",
   "editor.gotoLocation.multipleImplementations": "goto",
   "editor.gotoLocation.multipleTypeDefinitions": "goto",
+
+  // Clipboard and Copying
+  "editor.emptySelectionClipboard": false,
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.matchBrackets": "near",
   "editor.wordSeparators": "`~!@#%^&*()=+[{]}\\|;:'\",.<>/?",
-  "diffEditor.ignoreTrimWhitespace": false,
-  "diffEditor.renderSideBySide": false,
 
   /*
-  ============================================
-  ||           Terminal Configuration       ||
-  ============================================
-  */
+    =====================================================
+    ||               TERMINAL SETTINGS                 ||
+    =====================================================
+    */
 
   "terminal.integrated.fontFamily": "CaskaydiaCove NF, Consolas",
   "terminal.integrated.fontSize": 14,
@@ -84,16 +79,20 @@
   },
 
   /*
-  ============================================
-  ||        File & Save Configuration       ||
-  ============================================
-  */
+    =====================================================
+    ||             FILE & SAVE SETTINGS                ||
+    =====================================================
+    */
 
+  // Auto-Save and File Formatting
   "files.autoSave": "afterDelay",
-  "files.autoSaveDelay": 5000,
+  "files.autoSaveDelay": 2000,
   "files.trimTrailingWhitespace": true,
   "files.insertFinalNewline": true,
   "files.trimFinalNewlines": true,
+  "files.hotExit": "onExitAndWindowClose",
+
+  // Exclude Settings
   "files.exclude": {
     "**/.git": true,
     "**/.svn": true,
@@ -104,16 +103,14 @@
     "**/node_modules": true
   },
   "files.watcherExclude": {
-    "**/node_modules/**": true,
     "**/tmp/**": true
   },
-  "files.hotExit": "onExitAndWindowClose",
 
   /*
-  ============================================
-  ||        Search & Exclusions Settings    ||
-  ============================================
-  */
+    =====================================================
+    ||         SEARCH & EXCLUSIONS SETTINGS            ||
+    =====================================================
+    */
 
   "search.exclude": {
     "**/node_modules": true,
@@ -126,32 +123,31 @@
   "search.followSymlinks": false,
 
   /*
-  ============================================
-  ||           Git Integration              ||
-  ============================================
-  */
+    =====================================================
+    ||              GIT INTEGRATION                    ||
+    =====================================================
+    */
 
   "git.autofetch": true,
   "git.confirmSync": false,
   "git.enableSmartCommit": true,
   "git.countBadge": "tracked",
-  "git.fetchOnPull": true,
   "git.showProgress": true,
 
   /*
-  ============================================
-  ||        Telemetry & Privacy             ||
-  ============================================
-  */
+    =====================================================
+    ||           TELEMETRY & PRIVACY SETTINGS          ||
+    =====================================================
+    */
 
   "workbench.enableExperiments": false,
   "telemetry.telemetryLevel": "crash",
 
   /*
-  ============================================
-  ||       Language-Specific Configurations ||
-  ============================================
-  */
+    =====================================================
+    ||         LANGUAGE-SPECIFIC CONFIGURATIONS        ||
+    =====================================================
+    */
 
   "[python]": {
     "editor.defaultFormatter": "ms-python.black-formatter",
@@ -170,47 +166,56 @@
     "editor.defaultFormatter": "tamasfe.even-better-toml",
     "editor.formatOnSave": true
   },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
 
   /*
-  ============================================
-  ||       Python-Specific Configuration    ||
-  ============================================
-  */
+    =====================================================
+    ||        PYTHON-SPECIFIC CONFIGURATION            ||
+    =====================================================
+    */
 
   "python.analysis.typeCheckingMode": "basic",
   "python.analysis.autoImportCompletions": true,
   "python.analysis.diagnosticSeverityOverrides": {
-    "reportMissingImports": "error",
+    "reportMissingImports": "warning",
     "reportOptionalSubscript": "warning"
   },
   "python.testing.pytestEnabled": true,
-  "python.testing.autoTestDiscoverOnSaveEnabled": true,
+  "python.testing.autoTestDiscoverOnSaveEnabled": false,
 
   /*
-  ============================================
-  ||       PowerShell-Specific Configuration ||
-  ============================================
-  */
+    =====================================================
+    ||         POWERSHELL-SPECIFIC SETTINGS            ||
+    =====================================================
+    */
 
   "powershell.integratedConsole.focusConsoleOnExecute": false,
   "powershell.scriptAnalysis.enable": true,
   "powershell.codeFormatting.whitespaceBeforeOpenBrace": true,
 
   /*
-  ============================================
-  ||       Extension-Specific Settings      ||
-  ============================================
-  */
+    =====================================================
+    ||           EXTENSIONS SETTINGS                   ||
+    =====================================================
+    */
 
   "extensions.autoUpdate": true,
-  "extensions.ignoreRecommendations": true,
-  "extensions.autoCheckUpdates": true,
+  "extensions.autoCheckUpdates": false,
+
+  // amVim
+  "amVim.startInInsertMode": true,
+  "amVim.bindCtrlCommands": false,
+  "amVim.useSystemClipboard": true,
+  "amVim.smartRelativeLineNumbers": true,
+  "amVim.mimicVimSearchBehavior": true,
 
   /*
-  ============================================
-  ||       File Nesting Configuration       ||
-  ============================================
-  */
+    =====================================================
+    ||         FILE NESTING CONFIGURATION              ||
+    =====================================================
+    */
 
   "explorer.fileNesting.enabled": true,
   "explorer.fileNesting.expand": false,
@@ -227,18 +232,29 @@
     "Pipfile": "Pipfile.lock, requirements*.txt, tox.ini",
     "*.toml": ".editorconfig, .isort.cfg, .flake8"
   },
-  "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "editor.lineHeight": 1.2
+  "editor.experimentalEditContextEnabled": true,
+  "editor.experimentalWhitespaceRendering": "font",
+  "editor.linkedEditing": true,
+  "editor.wordWrapColumn": 88,
+  "editor.cursorBlinking": "smooth",
+  "editor.formatOnSave": true,
+  "editor.inlineSuggest.syntaxHighlightingEnabled": true,
+  "workbench.commandPalette.experimental.suggestCommands": true,
+  "workbench.preferredDarkColorTheme": "One Dark Modern",
+  "workbench.settings.editor": "json",
+  "window.newWindowDimensions": "inherit",
+  "explorer.incrementalNaming": "smart",
+  "explorer.sortOrder": "type",
+  "explorer.sortOrderLexicographicOptions": "unicode",
+  "terminal.external.windowsExec": "wt"
 
   /*
-  ============================================
-  ||       Miscellaneous Settings           ||
-  ============================================
-  ||  Placeholder for fields that may       ||
-  ||  automatically be added by extensions, ||
-  ||  plugins, or the VS Code editor.       ||
-  ============================================
-  */
+    =====================================================
+    ||       MISCELLANEOUS SETTINGS                    ||
+    =====================================================
+    ||   Placeholder for fields that may              ||
+    ||   automatically be added by extensions,        ||
+    ||   plugins, or the VS Code editor.              ||
+    =====================================================
+    */
 }
