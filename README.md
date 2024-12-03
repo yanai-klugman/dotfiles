@@ -9,6 +9,7 @@
 
 - [Cursor](https://github.com/coder/cursor-arm)
 - [VSCode](https://code.visualstudio.com/download)
+- [Windsurf]
 
 ## Containers
 
