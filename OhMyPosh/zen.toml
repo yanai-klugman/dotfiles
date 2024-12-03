@@ -8,7 +8,8 @@ final_space = true
   background = 'transparent'
 
 [transient_prompt]
-  template = '\n❯ '
+  template = '''
+❯ '''
   background = 'transparent'
   foreground_templates = ['{{if gt .Code 0}}#eb6f92{{end}}', '{{if eq .Code 0}}#e0def4{{end}}']
 
@@ -25,11 +26,10 @@ final_space = true
     style = 'plain'
 
     [blocks.segments.properties]
-      cache_duration = 'none'
       style = 'full'
 
   [[blocks.segments]]
-    template = '{{ .HEAD }}{{ if or (.Working.Changed) (.Staging.Changed) }}*{{ end }} <#9ccfd8>{{ if gt .Behind 0 }}⇣{{ end }}{{ if gt .Ahead 0 }}⇡{{ end }}</>'
+    template = ' {{ .HEAD }}{{ if gt .Ahead 0 }} ⇡{{ .Ahead }}{{ end }}{{ if gt .Behind 0 }} ⇣{{ .Behind }}{{ end }}{{ if .Working.Changed }}  {{ .Working.String }}{{ end }}{{ if .Staging.Changed }}  {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }}  {{ .StashCount }}{{ end }}'
     foreground = '#c4a7e7'
     background = 'transparent'
     type = 'git'
@@ -37,9 +37,8 @@ final_space = true
 
     [blocks.segments.properties]
       branch_icon = ''
-      cache_duration = 'none'
-      commit_icon = '@'
       fetch_status = true
+      fetch_stash_count = true
 
 [[blocks]]
   type = 'rprompt'
@@ -70,4 +69,3 @@ final_space = true
 
     [blocks.segments.properties]
       cache_duration = 'none'
-
